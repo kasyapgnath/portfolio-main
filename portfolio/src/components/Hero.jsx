@@ -141,13 +141,15 @@ import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
-import myimg from "../assets/prof2.jpeg"; // Replace with your image
+import myimg from '../assets/prof2.jpeg'; // ✅ Your profile image
 
+// === Animation Variants ===
 const fadeInVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
+// === Component ===
 const Hero = () => {
   const [text] = useTypewriter({
     words: ['Web Developer', 'Frontend Developer'],
@@ -158,9 +160,9 @@ const Hero = () => {
   });
 
   const linkss = [
-    { icon: FaGithub, linkk: "https://github.com/kasyapgnath" },
-    { icon: FaLinkedin, linkk: "https://www.linkedin.com/in/kasyap-g-nath-08a54631b/" },
-    { icon: FaEnvelope, linkk: "mailto:kasyapgnath97@gmail.com" },
+    { icon: FaGithub, linkk: 'https://github.com/kasyapgnath' },
+    { icon: FaLinkedin, linkk: 'https://www.linkedin.com/in/kasyap-g-nath-08a54631b/' },
+    { icon: FaEnvelope, linkk: 'mailto:kasyapgnath97@gmail.com' },
   ];
 
   return (
@@ -168,46 +170,48 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center pb-24 px-4 bg-black relative overflow-hidden"
     >
-      {/* Background Neon Glows */}
+      {/* === Background Neon Glows === */}
       <motion.div
-        className="absolute top-10 left-1/4 w-96 h-96 bg-[#CBF3F0] rounded-full filter blur-3xl opacity-30 animate-pulse-slow"
+        className="absolute top-10 left-1/4 w-80 h-80 md:w-96 md:h-96 bg-[#CBF3F0] rounded-full filter blur-3xl opacity-30 animate-pulse-slow"
         initial={{ scale: 0.8 }}
         animate={{ scale: 1.2 }}
         transition={{ duration: 6, repeat: Infinity, repeatType: 'reverse' }}
       ></motion.div>
 
       <motion.div
-        className="absolute bottom-10 right-1/4 w-80 h-80 bg-[#00796B] rounded-full filter blur-2xl opacity-25 animate-pulse-slow"
+        className="absolute bottom-10 right-1/4 w-64 h-64 md:w-80 md:h-80 bg-[#00796B] rounded-full filter blur-2xl opacity-25 animate-pulse-slow"
         initial={{ scale: 1 }}
         animate={{ scale: 1.3 }}
         transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
       ></motion.div>
 
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Text Content */}
+      {/* === Content Grid === */}
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10 mt-20 md:mt-0">
+        {/* === Left Side (Text) === */}
         <motion.div
           variants={fadeInVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="order-2 md:order-1"
+          className="order-2 md:order-1 text-center md:text-left"
         >
-          <p className="text-xl text-[#CBF3F0] mb-3 font-mono tracking-wide">
-            Hi, I'm
-          </p>
-          <h1 className="text-6xl sm:text-7xl font-extrabold text-[#00796B] mb-4 leading-tight drop-shadow-lg">
+          <p className="text-xl text-[#CBF3F0] mb-3 font-mono tracking-wide">Hi, I'm</p>
+
+          <h1 className="text-5xl sm:text-7xl font-extrabold text-[#00796B] mb-4 leading-tight drop-shadow-lg">
             Kasyap G Nath
           </h1>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-[#CBF3F0] h-10 mb-8">
+
+          <h2 className="text-2xl sm:text-4xl font-semibold text-[#CBF3F0] h-10 mb-8">
             <span>{text}</span>
             <Cursor cursorColor="#00796B" />
           </h2>
 
-          <p className="text-gray-300 max-w-lg mb-8">
+          <p className="text-gray-300 max-w-lg mx-auto md:mx-0 mb-8">
             Crafting responsive and visually stunning web experiences. Let's create something exceptional together.
           </p>
 
-          <div className="flex space-x-4 mb-8">
+          {/* === Buttons === */}
+          <div className="flex justify-center md:justify-start space-x-4 mb-8">
             <a
               href="#contact"
               className="px-6 py-3 bg-gradient-to-r from-[#CBF3F0] to-[#00796B] text-black font-bold rounded-full hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-[#CBF3F0]/50"
@@ -223,8 +227,8 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex space-x-6">
+          {/* === Social Icons === */}
+          <div className="flex justify-center md:justify-start space-x-6">
             {linkss.map((each, idx) => {
               const Icon = each.icon;
               return (
@@ -242,14 +246,14 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Profile Image with Tilt */}
+        {/* === Right Side (Tilt Image) === */}
         <motion.div
           variants={fadeInVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="order-1 md:order-2 flex justify-center ml-[205px]" // ✅ shifted right by 25px
+          className="order-1 md:order-2 flex justify-center md:justify-end md:ml-[25px]" // ✅ Shifts right on desktop only
         >
           <Tilt
             tiltMaxAngleX={15}
@@ -258,7 +262,7 @@ const Hero = () => {
             glareMaxOpacity={0.2}
             scale={1.05}
             transitionSpeed={2500}
-            className="relative w-72 h-72"
+            className="relative w-56 h-56 sm:w-72 sm:h-72"
           >
             <div className="absolute inset-0 bg-[#CBF3F0] rounded-full opacity-20 blur-xl"></div>
             <div className="w-full h-full border-4 border-[#CBF3F0] rounded-full overflow-hidden shadow-2xl">
