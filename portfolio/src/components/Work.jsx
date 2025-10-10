@@ -216,7 +216,7 @@ const projectList = [
     tags: ["React", "Framer Motion", "Tailwind"],
     github:
       "https://github.com/kasyapgnath/portfolio-main/tree/5473be8d0dbb45c607f061e7fad81cab7ce4507e/portfolio",
-    live: "https://yourportfolio.netlify.app",
+    live: "https://portfolio-main-1-ten.vercel.app/",
   },
   {
     name: "Note App",
