@@ -196,7 +196,7 @@ const projectList = [
     tags: ["React", "Tailwind", "API"],
     github:
       "https://github.com/kasyapgnath/Netflix-Clone/tree/efaf494d6d0b8624b7eb3168d6ed0f12ab812220/Netflixfrontend",
-    live: "https://netflix-clone-va9u.vercel.app/",
+    live: "https://netflix-clone-last-ten.vercel.app/",
   },
   {
     name: "Weather App",
@@ -216,7 +216,7 @@ const projectList = [
     tags: ["React", "Framer Motion", "Tailwind"],
     github:
       "https://github.com/kasyapgnath/portfolio-main/tree/5473be8d0dbb45c607f061e7fad81cab7ce4507e/portfolio",
-    live: "https://portfolio-main-1-ten.vercel.app/",
+    live: "https://portfolio-main-last-eta.vercel.app/",
   },
   {
     name: "Note App",
