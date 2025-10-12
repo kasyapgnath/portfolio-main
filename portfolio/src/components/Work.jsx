@@ -206,7 +206,7 @@ const projectList = [
     tags: ["React", "OpenWeather API"],
     github:
       "https://github.com/kasyapgnath/weather-app/tree/2e41c625d71641327ab9dd7b928cbd5fd1bdd39f/Weatherapp",
-    live: "https://weather-app-silk-omega-57.vercel.app/",
+    live: "https://weather-app-new-two-iota.vercel.app/",
   },
   {
     name: "Portfolio Website",
