@@ -66,7 +66,7 @@ const About = () => {
             Hi, It's <span className="text-[#CBF3F0]">Kasyap G Nath</span>
           </h3>
           <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-            I am a <strong>Frontend Developer</strong> with a passion for crafting visually stunning and responsive web experiences. My expertise spans from concept  to full implementation using <strong>React, Tailwind CSS, and modern JavaScript</strong>.
+            I am a <strong>Fullstack Developer</strong> with a passion for crafting visually stunning and responsive web experiences. My expertise spans from concept  to full implementation using <strong>Python,React, Tailwind CSS, and modern JavaScript</strong>.
           </p>
           <p className="text-gray-300 text-lg leading-relaxed">
             I enjoy turning complex problems into elegant, user-friendly solutions. My goal is to create digital experiences that are not just functional, but delightful for users. Let's collaborate and bring your next project to life!
